@@ -8,9 +8,9 @@ Gather my configuration for:
 Just run the below scripts. Existing files are backuped if needed.
 
 ```bash
-git clone --bare https://github.com/Mugu-Mugu/mydotfiles.git $HOME/.cfg
+git clone --bare --recursive https://github.com/Mugu-Mugu/mydotfiles.git $HOME/.cfg
 function config {
-   /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
+   git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
 }
 mkdir -p .config-backup
 config checkout
