@@ -6,8 +6,8 @@
 # ##################################################################
 # local bash configuration (usually empty, but may have some specific configuration, work etc...)
 # ##################################################################
-if [ -f ~/.cfglocal/.bashrc ]; then
-    source ~/.cfglocal/.bashrc
+if [ -f ~/.cfglocal/.pre.bashrc ]; then
+    source ~/.cfglocal/.pre.bashrc
 fi
 # TODO should add a check that prevent loading of the rest of the configuration
 # ##################################################################
@@ -121,7 +121,7 @@ fi
 # ##################################################################
 # third parties bash configuration
 # ##################################################################
-source .bash-sensible/sensible.bash
+source ~/.bash-sensible/sensible.bash
 # ##################################################################
 
 
@@ -129,7 +129,7 @@ source .bash-sensible/sensible.bash
 # my custom conf starts now
 # ##################################################################
 # dotfiles management
-alias config='/usr/bin/git --git-dir=/home/mugu/.cfg/ --work-tree=/home/mugu'
+alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 
 export EDITOR=vim
@@ -141,8 +141,9 @@ export VISUAL=gvim
 
 
 
-
-
-
-
-
+# ##################################################################
+# local bash post configuration (usually empty, but may have some specific configuration, work etc...)
+# ##################################################################
+if [ -f ~/.cfglocal/.post.bashrc ]; then
+    source ~/.cfglocal/.post.bashrc
+fi
