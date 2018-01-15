@@ -132,8 +132,11 @@ source ~/.bash-sensible/sensible.bash
 alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 
+export PATH="~/bin:$PATH"
 export EDITOR=vim
 export VISUAL=gvim
+# hidden file incleded excepted .git
+export FZF_DEFAULT_COMMAND='fd --follow --hidden --exclude .git'
 # ##################################################################
 
 
