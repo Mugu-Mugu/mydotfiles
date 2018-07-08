@@ -1,5 +1,5 @@
 [submodule ".bash-sensible"]
-	path = .bash-sensible
+	path = .bashrc.d/bash-sensible
 	url = https://github.com/Mugu-Mugu/bash-sensible
 [submodule ".emacs.d"]
 	path = .emacs.d
