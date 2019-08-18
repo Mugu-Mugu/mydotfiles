@@ -117,6 +117,11 @@ export EDITOR=vim
 export VISUAL=gvim
 # hidden file incleded excepted .git
 export FZF_DEFAULT_COMMAND='fd --follow --hidden --exclude .git'
+
+
+# for libvterm integration
+cd() {
+  builtin cd "$@" || return
+  [ "$OLDPWD" = "$PWD" ] || echo -e "\e]51;A$(pwd)\e\\"
+}
 # ##################################################################
-
-
