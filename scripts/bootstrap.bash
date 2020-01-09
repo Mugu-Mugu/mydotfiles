@@ -42,7 +42,7 @@ function _config_install_emacs {
 	rm -rf /tmp/emacs
 	sudo apt install libgtk-3-dev libxpm-dev libjpeg-dev libgif-dev libtiff-dev gnutls-bin gnutls-dev libncurses-dev libxml2-dev libjansson-dev libvterm-dev cmake libtool-bin
 	git clone https://git.savannah.gnu.org/git/emacs.git /tmp/emacs
-	cd /tmp/emacs && ./autogen.sh && ./configure --with-modules --with-json && make
+	cd /tmp/emacs && ./autogen.sh && ./configure --with-modules --with-json --with-cairo && make
 	sudo make install
 	cd -
 }
